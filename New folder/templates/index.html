@@ -1,0 +1,19 @@
+<html>
+    <head>
+        <title>Location finder</title>
+    </head>
+    <body>
+        <h1>Enter Location</h1>
+        <form method="POST">
+            <input type="text" name="Location" placeholder="Enter Location" required>
+            <button type="submit">Get Location</button> 
+        </form>
+
+        {% if data%}
+        <h2>Latitude:{{data.Latitude}}</h2>
+        <h2>Longitude:{{data.Latitude}}</h2>
+        {% elif error%}
+                <p style="color: blue;">{{error}}</p>
+        {% endif %}
+    </body>
+</html>
